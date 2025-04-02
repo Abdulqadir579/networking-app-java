@@ -1,0 +1,33 @@
+<settings>
+<servers>
+  <server>
+    <id>nextwork-nextworkdevopsCICD</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>nextwork-nextworkdevopsCICD</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>nextwork-nextworkdevopsCICD</id>
+        <url>https://nextwork-340752808710.d.codeartifact.us-east-1.amazonaws.com/maven/nextworkdevopsCICD/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>nextwork-nextworkdevopsCICD</id>
+    <name>nextwork-nextworkdevopsCICD</name>
+    <url>https://nextwork-340752808710.d.codeartifact.us-east-1.amazonaws.com/maven/nextworkdevopsCICD/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
